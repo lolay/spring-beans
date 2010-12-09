@@ -1,0 +1,4 @@
+This project simply fixes an issue with BeanUtils throwing an exception when
+trying to get the system class loader in GAE. GAE doesn't allow access
+to the system class loader. So, this implementation gets the class loader
+from the thread instead.
