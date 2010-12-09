@@ -365,7 +365,7 @@ public abstract class BeanUtils {
 		}
 		ClassLoader cl = targetType.getClassLoader();
 		if (cl == null) {
-			cl = ClassLoader.getSystemClassLoader();
+			cl = Thread.currentThread().getContextClassLoader();
 			if (cl == null) {
 				return null;
 			}
